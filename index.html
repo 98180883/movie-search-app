@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Search App</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>🎬Find Movies Without Hassle</h1>
+  <a class="nav" href="wishlist.html">Go To Wishlist</a>
+  </header>
+<div class="page">
+   <!-- slide -->
+ <div class="slider-wrapper">
+  <button class="slide-btn left" id="trendLeft">❮</button>
+
+  <div class="trendingmovies">
+    <p id="trending-header">Trending Now</p>
+    <div id="trending"></div>
+  </div>
+  <button class="slide-btn right" id="trendRight">❯</button>
+  </div>
+ <!-- Search Section -->
+   <p id="search-header">Search your favourite movie </p>
+   <section class="search-section">
+   
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="Enter movie name..." 
+    />
+    <button id="searchBtn"><img src="search.png" alt="search" width="30"/></button>
+  </section>
+
+  <!-- Status Message -->
+  <p id="message"></p>
+<div class="slider-wrapper">
+  <button class="slide-btn left" id="searchLeft">❮</button>
+<div id="movies"></div>
+ <button class="slide-btn right" id="searchRight">❯</button>
+</div>
+</div>
+  <!-- Footer -->
+  <footer>
+    <p>© Copyright Rules Reserved </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

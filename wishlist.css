@@ -1,0 +1,52 @@
+:root {
+    --bg-body: linear-gradient(135deg, #181f68,#4f6e11);
+    --bg-primary : #010102;
+    --bg-secondary: #5656ff;
+    --bg-text:#ffffff;
+    --font-medium : 20px;
+    --font-large:24px;
+}
+header{
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    padding: 5px 0; 
+    font-size:var(--font-large);
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: center;
+  background: var(--bg-body);
+  color: var(--bg-text);
+  margin: 0; 
+  gap: 60px;
+}
+
+
+#wishlist{
+  width:100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:60px;
+    
+}
+.movie{
+ display: flex;
+ flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.movie img{
+    width:300px;
+    height:350px;
+border-radius: 20px;
+}
