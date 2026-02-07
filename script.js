@@ -13,13 +13,18 @@ const searchBtn = document.getElementById("searchBtn");
 const moviesDiv = document.getElementById("movies");
 let message_search = document.getElementById("message");
 let trendingMovie = document.getElementById("trending");
-const searchLeft = document.getElementById("searchLeft");
-const searchRight = document.getElementById("searchRight");
+
  const APi_Key = OMDB_APi_Key;  
 
 
-searchLeft.style.display="none";
-searchRight.style.display="none";
+//toggle slider (laptop view)
+function toggleSearchSlider(show) {
+  const left = document.getElementById("searchLeft");
+  const right = document.getElementById("searchRight");
+
+  left.classList.toggle("show", show);
+  right.classList.toggle("show", show);
+}
 //trending
 async function trending(){
    try{
@@ -28,6 +33,7 @@ async function trending(){
      console.log(data); 
      if(data.Response==="True"){
       renderMovies(data.Search , trendingMovie);
+     
        
      }
      else{
@@ -40,6 +46,8 @@ async function trending(){
   }
 }
 trending();
+
+
 
 
 //on search find
@@ -62,14 +70,11 @@ const query = document.getElementById("searchInput").value.trim();
      if(data.Response==="True"){
          message_search.innerText=" ";
        renderMovies(data.Search , moviesDiv);
-       searchLeft.style.display="block";
-       searchRight.style.display="block";
+      toggleSearchSlider(true);
      }
      else{
        message_search.innerText="No Movies Found";
-       moviesDiv.innerHTML="";
-       searchLeft.style.display="none";
-       searchRight.style.display="none";
+       moviesDiv.innerHTML="";       
      }
     }
     catch (error) {
@@ -217,4 +222,3 @@ attachSlider(
   document.getElementById("searchRight"),
   document.getElementById("movies")
 )
-

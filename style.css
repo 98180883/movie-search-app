@@ -33,11 +33,11 @@ header{
   transform: scale(1.05);
  color: #ffd700;
 }
+/* slider */
 .slider-wrapper {
   position: relative;
   width: 100%;
 }
-/* buttons */
 .slide-btn {
   position: absolute;
   top:40%;
@@ -49,9 +49,11 @@ header{
   padding: 10px 14px;
   cursor: pointer;
   border-radius: 50%;
+  display:none;
 }
 .slide-btn.left {
   left: 10px;
+ 
 }
 
 .slide-btn.right {
@@ -62,7 +64,38 @@ header{
   background: rgba(85, 255, 66, 0.85);
   
 }
+/*slider for trending*/
+.slide-btn.show {
+    display: block;
+  }
 
+.slide-btn-Trending {
+  position: absolute;
+  top:40%;
+  transform: translateY(-50%);
+  background: rgb(255, 255, 255);
+  color: rgb(31, 12, 155);
+  border: none;
+  font-size: 28px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+ 
+}
+.slide-btn-Trending.left {
+  left: 10px;
+}
+
+.slide-btn-Trending.right {
+  right: 10px;
+}
+
+.slide-btn-Trending:hover {
+  background: rgba(85, 255, 66, 0.85);
+  
+}
+
+/*search*/
 .search-section{
     display: flex;
     justify-content: center;
@@ -83,6 +116,7 @@ font-size: var(--font-medium);
     padding:10px;
     border-radius:10px;
 }
+/*trending movies */
 .trendingmovies{
     display: flex;
     flex-direction: column;
@@ -112,7 +146,7 @@ font-size: var(--font-medium);
 #trending::-webkit-scrollbar {
     display: none;
 }
-#treding {
+#trending {
     scrollbar-width: none;    
     -ms-overflow-style: none;  
 } 
@@ -120,7 +154,7 @@ font-size: var(--font-medium);
 .movietrending img{
 border-radius: 20px;
 }
-
+/*searched movie*/
 #movies{
    
     width:95%;
@@ -150,7 +184,7 @@ border-radius: 20px;
 } 
 
 .movie img{
-    flex: 0 0 auto; /* prevents shrinking */
+    flex: 0 0 auto; 
     border-radius: 20px;
 }
 .movie img,
@@ -165,6 +199,7 @@ border-radius: 20px;
   transform: scale(1.05);
    box-shadow: 0 10px 20px rgba(223, 220, 220, 0.231);
 }
+/*movie title*/
 #title{
   width:70%;
   margin: 10px auto;
@@ -249,9 +284,6 @@ header{
   }
 
 
-
-  
-
   .buttons {
     width: 100%;
     align-items: center;
@@ -272,8 +304,11 @@ header{
     width: 100%;
     overflow-x:scroll;
   }
-.slide-btn{
+.slide-btn.show{
   display: none;
+}
+.slide-btn-Trending{
+  display:none;
 }
   #search-header,
   #trending-header {
@@ -297,7 +332,7 @@ header{
     font-size: 12px;
   }
 
-  /* STACK movies vertically on mobile */
+  /*Keep movies vertically on mobile */
 #trending,
   #movies {
     width:70%;
@@ -307,7 +342,7 @@ header{
     gap: 16px;
   }
 
-  /* Resize images */
+
   .movie img,
   .movietrending img {
     width:240px;
