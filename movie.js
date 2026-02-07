@@ -1,4 +1,4 @@
-const APi_Key =  OMDB_APi_Key;
+ const APi_Key = "efa2841b";  
 let movieInfo = document.getElementById("movieinfo");
 
 const params = new URLSearchParams(window.location.search);

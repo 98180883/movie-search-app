@@ -14,7 +14,7 @@ const moviesDiv = document.getElementById("movies");
 let message_search = document.getElementById("message");
 let trendingMovie = document.getElementById("trending");
 
- const APi_Key = OMDB_APi_Key;  
+ const APi_Key = "efa2841b";  
 
 
 //toggle slider (laptop view)
