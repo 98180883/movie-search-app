@@ -15,7 +15,7 @@ let message_search = document.getElementById("message");
 let trendingMovie = document.getElementById("trending");
 const searchLeft = document.getElementById("searchLeft");
 const searchRight = document.getElementById("searchRight");
-const APi_Key = "efa2841b";
+ const APi_Key = OMDB_APi_Key;  
 
 
 searchLeft.style.display="none";
